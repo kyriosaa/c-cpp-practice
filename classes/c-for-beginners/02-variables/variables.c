@@ -16,7 +16,7 @@ int main () {
     printf("Your average grade is \"%c\"\n", grade);
     printf("Your GPA is %f\n", gpa);
 
-    /*------------------------------------------------------------------------*/
+    /*-------------------------------------------------------------------------*/
 
     char a = 'A';                   // single character             %c
     char b[] = "Bro";               // array of characters          %s
