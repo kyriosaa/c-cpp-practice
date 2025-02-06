@@ -12,5 +12,5 @@ int main() {
         printf("\n%s", cars[i]);
     }
 
-    return 0;
+    return 0; 
 }
