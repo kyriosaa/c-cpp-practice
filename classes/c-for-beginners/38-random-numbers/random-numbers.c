@@ -8,9 +8,13 @@ int main() {
 
     srand(time(0));
 
-    int number1 = (rand() % 6) + 1;
+    int number1 = (rand() % 20) + 1;        // Use modulus (%) to get the remainder
+    int number2 = (rand() % 20) + 1;        // and + 1 since the starting number is 0.
+    int number3 = (rand() % 20) + 1;        // So ((rand() % 20) + 1) will give an output from 1-20
 
-    printf("%d", number1);
+    printf("%d\n", number1);
+    printf("%d\n", number2);
+    printf("%d\n", number3);
 
     return 0;
 }
