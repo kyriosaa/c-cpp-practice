@@ -14,7 +14,7 @@ int main() {
     printf("        Within herself,        \n");
     printf("       Found loveliness,       \n");
     printf("Through the soul's own mastery.\n");
-    printf("   And now the world recieves  \n");
+    printf("   And now the world receives  \n");
     printf("        From her dower:        \n");
     printf("  The message of the strength  \n");
     printf("        Of inner power.        \n");
