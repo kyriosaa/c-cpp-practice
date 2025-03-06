@@ -5,31 +5,35 @@
 #define EMPTY -1
 #define FULL (MAX_LEN - 1)
 
-typedef struct stk {char s[MAX_LEN]; int top;} stack;
+typedef struct stack {char s[MAX_LEN]; int top;} stack;
 
-void reset(stack *stk) {
-    stk -> top = EMPTY;
+void reset(stack *stack) {
+    stack -> top = EMPTY;
 }
 
-void push(char c, stack *stk) {
-    stk -> top++;
-    stk -> s[stk -> top] = c;
+void push(char c, stack *stack) {
+    if(stack -> top == FULL) {
+        return; // stack overflow !!!!!
+    }
+
+    stack -> top++;
+    stack -> s[stack -> top] = c;
 }
 
-char pop(stack *stk) {
-    return(stk -> s[stk -> top--]);
+char pop(stack *stack) {
+    return(stack -> s[stack -> top--]);
 }
 
-char top(const stack *stk) {
-    return(stk -> s[stk -> top]);
+char top(const stack *stack) {
+    return(stack -> s[stack -> top]);
 }
 
-int is_empty(const stack *stk) {
-    return(stk -> top == EMPTY);
+int is_empty(const stack *stack) {
+    return(stack -> top == EMPTY);
 }
 
-int is_full(const stack *stk) {
-    return(stk -> top == FULL);
+int is_full(const stack *stack) {
+    return(stack -> top == FULL);
 }
 
 int main() {
