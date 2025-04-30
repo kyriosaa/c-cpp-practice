@@ -6,4 +6,4 @@ University of California Santa Cruz
 
 https://www.coursera.org/specializations/coding-for-everyone
 
-![alt text](https://github.com/kyriosaa/c-cpp-practice/blob/main/classes/c-cpp-specialization/course-header.png "Coding For Everyone: C and C++ Specialization")
+<img src='./course-header.png' width='100%' >
