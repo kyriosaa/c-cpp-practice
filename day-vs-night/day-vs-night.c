@@ -298,7 +298,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     LPSTR lpCmdLine, int nCmdShow)
 {
-    srand(time(NULL));
+    srand((unsigned int)(time(NULL) + clock()));
     WNDCLASSEX wc;
     HWND hwnd;
     MSG Msg;
