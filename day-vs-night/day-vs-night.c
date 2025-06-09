@@ -43,10 +43,21 @@ void InitializeGrid() {
     rightVelY = sin(rightAngle) * speed;
     
     // create the grid
+    int middleColumn = GRID_SIZE / 2;
+
     for (int i = 0; i < GRID_SIZE; i++) {
         for (int j = 0; j < GRID_SIZE; j++) {
-            if (j < GRID_SIZE / 2) {
+            // LEFT
+            if (j < middleColumn) {
                 grid[i][j] = 0; // white = 0
+            // MIDDLE - half white, half black
+            } else if (j == middleColumn) {
+                if (i < GRID_SIZE / 2) {
+                    grid[i][j] = 0; // top half = white (0)
+                } else {
+                    grid[i][j] = 1; // bottom half = black (1)
+                }
+            // RIGHT
             } else {
                 grid[i][j] = 1; // black = 1
             }
