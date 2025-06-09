@@ -201,9 +201,9 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
                 for (int j = 0; j < GRID_SIZE; j++) {
                     HBRUSH brush;
                     if (grid[i][j] == 0) {
-                        brush = CreateSolidBrush(RGB(234, 226, 183)); // day color
+                        brush = CreateSolidBrush(RGB(234, 226, 183)); // dawn color
                     } else {
-                        brush = CreateSolidBrush(RGB(13, 35, 43)); // night color
+                        brush = CreateSolidBrush(RGB(13, 35, 43)); // dusk color
                     }
                     
                     RECT cellRect = {
@@ -266,8 +266,8 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
             // text strings
             char dayText[50], nightText[50];
-            sprintf(dayText, "day: %d", dayCount);
-            sprintf(nightText, "night: %d", nightCount);
+            sprintf(dayText, "dawn: %d", dayCount);
+            sprintf(nightText, "dusk: %d", nightCount);
 
             // draw text
             int textY = GRID_SIZE * CELL_SIZE + 10;
@@ -328,7 +328,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance,
     hwnd = CreateWindowEx(
         WS_EX_CLIENTEDGE,
         g_szClassName,
-        "day vs night",
+        "dawn vs dusk",
         WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT, 520, 580,
         NULL, NULL, hInstance, NULL);
