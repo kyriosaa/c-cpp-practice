@@ -183,7 +183,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
     {
         case WM_CREATE:
             InitializeGrid();
-            SetTimer(hwnd, 1, 30, NULL); // i put 30 bcs it feels best (higher = slower)
+            SetTimer(hwnd, 1, 25, NULL); // i put 25 bcs it feels best (higher = slower)
             break;
             
         case WM_TIMER:
